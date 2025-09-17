@@ -332,3 +332,68 @@ header h1 {
 .contact-form button:hover {
     background: #d18bb7;
 }
+
+/* FAQ section styles */
+.faq-section {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(161,78,124,0.10);
+    padding: 32px 24px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #f3d6e6;
+    padding-bottom: 8px;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    color: #a14e7c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: #e67ca7;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 0 12px 0;
+    color: #555;
+    font-size: 1rem;
+    background: #f8f6fa;
+    border-radius: 0 0 8px 8px;
+    margin-top: -4px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-question .arrow {
+    margin-left: 8px;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question .arrow {
+    transform: rotate(180deg);
+}

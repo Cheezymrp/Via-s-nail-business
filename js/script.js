@@ -24,6 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // FAQ dropdown functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const item = btn.closest('.faq-item');
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+            } else {
+                document.querySelectorAll('.faq-item.active').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            }
+        });
+    });
 });
 
 // Modal image viewer
