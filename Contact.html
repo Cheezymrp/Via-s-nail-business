@@ -38,31 +38,50 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
                 <button type="submit">Send Email</button>
             </form>
-            <form id="booking-form" class="contact-form" onsubmit="event.preventDefault(); addToCart(document.getElementById('service').value, document.getElementById('design').value, parseFloat(document.getElementById('design').selectedOptions[0].dataset.price));">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="service">Service:</label>
-                <select id="service" name="service" required>
-                    <option value="Full Gel X Set">Full Gel X Set</option>
-                    <option value="Builder Gel">Builder Gel</option>
-                    <option value="Add-Ons">Add-Ons</option>
-                    <option value="Designs">Designs</option>
+            <form id="booking-form" class="contact-form" onsubmit="event.preventDefault(); addAllToCart();">
+                <label for="base">Base Price:</label>
+                <select id="base" name="base">
+                    <option value="Dry Manicure" data-price="15">Dry Manicure ($15)</option>
+                    <option value="Gel Manicure" data-price="25">Gel Manicure ($25)</option>
+                    <option value="Builder Gel" data-price="30">Builder Gel ($30)</option>
+                    <option value="Press Ons" data-price="30">Press Ons ($30)</option>
+                    <option value="Gel X (Any Length)" data-price="35">Gel X (Any Length) ($35)</option>
                 </select>
-                <label for="design">Design:</label>
-                <select id="design" name="design" required>
-                    <option value="Simple" data-price="5">Simple ($5)</option>
+                <label for="fullset">Full Set Designs:</label>
+                <select id="fullset" name="fullset">
+                    <option value="Chrome" data-price="5">Chrome ($5)</option>
                     <option value="French Tip" data-price="10">French Tip ($10)</option>
-                    <option value="Charms" data-price="15">Charms ($15)</option>
-                    <option value="3D Art" data-price="20">3D Art ($20)</option>
+                    <option value="Isolated Chrome" data-price="13">Isolated Chrome ($13)</option>
+                    <option value="Ombre Aura" data-price="13">Ombré Aura ($13)</option>
+                    <option value="Bling" data-price="15">Bling ($15)</option>
                 </select>
-                <button type="submit">Add to Cart</button>
+                <label>Per Nail Designs:</label>
+                <div id="pernail-checkboxes" class="pernail-checkboxes">
+                    <label><input type="checkbox" value="Charms/Rhinestones" data-price="1"> Charms/Rhinestones ($1)</label><br>
+                    <label><input type="checkbox" value="Chrome" data-price="1"> Chrome ($1)</label><br>
+                    <label><input type="checkbox" value="Easy Nail Art" data-price="2"> Easy Nail Art ($2)</label><br>
+                    <label><input type="checkbox" value="French Tip" data-price="2"> French Tip ($2)</label><br>
+                    <label><input type="checkbox" value="Blooming Gel" data-price="2"> Blooming Gel ($2)</label><br>
+                    <label><input type="checkbox" value="Ombre/Aura" data-price="3"> Ombré/Aura ($3)</label><br>
+                    <label><input type="checkbox" value="Difficult Nail Art" data-price="3"> Difficult Nail Art ($3)</label><br>
+                    <label><input type="checkbox" value="3D Nail Art (Small)" data-price="3"> 3D Nail Art (Small) ($3)</label><br>
+                    <label><input type="checkbox" value="Isolated Chrome" data-price="3"> Isolated Chrome ($3)</label><br>
+                    <label><input type="checkbox" value="Bling (Full Nail)" data-price="3"> Bling (Full Nail) ($3)</label><br>
+                    <label><input type="checkbox" value="3D Nail Art (Med/Large)" data-price="5"> 3D Nail Art (Med/Large) ($5)</label>
+                </div>
+                <label for="addons">Add-Ons:</label>
+                <select id="addons" name="addons">
+                    <option value="Soak Off" data-price="15">Soak Off ($15)</option>
+                    <option value="Fills" data-price="5">Fills ($5)</option>
+                    <option value="Mini Cuticle Oil (Refillable)" data-price="3">Mini Cuticle Oil (Refillable) ($3)</option>
+                </select>
+                <button type="button" onclick="addAllToCart()">Add All Selected to Cart</button>
             </form>
             <div class="cart-section">
                 <h3>Your Cart</h3>
                 <ul id="cart-list"></ul>
-                <p>Total: <span id="cart-total">$0.00</span></p>
+                <p>Booking Charge: <span>$10.00</span></p>
+                <p>Total: <span id="cart-total">$10.00</span></p>
                 <button onclick="clearCart()">Clear Cart</button>
             </div>
         </section>
