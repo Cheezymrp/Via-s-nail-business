@@ -397,3 +397,56 @@ header h1 {
 .faq-item.active .faq-question .arrow {
     transform: rotate(180deg);
 }
+
+.cart-section {
+    margin: 32px auto 0 auto;
+    max-width: 400px;
+    background: #f8f6fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(161,78,124,0.08);
+    padding: 20px 16px;
+    text-align: center;
+}
+.cart-section h3 {
+    color: #a14e7c;
+    margin-bottom: 12px;
+}
+#cart-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+#cart-list li {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    color: #6c3a5c;
+    font-size: 1rem;
+}
+#cart-total {
+    font-weight: bold;
+    color: #a14e7c;
+}
+.cart-section button {
+    background: #a14e7c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+.cart-section button:hover {
+    background: #d18bb7;
+}
+#booking-form select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}

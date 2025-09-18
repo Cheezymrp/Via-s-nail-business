@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/Via's logo.jpg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
 </head>
 <body>
     <header>
@@ -37,6 +38,33 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
                 <button type="submit">Send Email</button>
             </form>
+            <form id="booking-form" class="contact-form" onsubmit="event.preventDefault(); addToCart(document.getElementById('service').value, document.getElementById('design').value, parseFloat(document.getElementById('design').selectedOptions[0].dataset.price));">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="service">Service:</label>
+                <select id="service" name="service" required>
+                    <option value="Full Gel X Set">Full Gel X Set</option>
+                    <option value="Builder Gel">Builder Gel</option>
+                    <option value="Add-Ons">Add-Ons</option>
+                    <option value="Designs">Designs</option>
+                </select>
+                <label for="design">Design:</label>
+                <select id="design" name="design" required>
+                    <option value="Simple" data-price="5">Simple ($5)</option>
+                    <option value="French Tip" data-price="10">French Tip ($10)</option>
+                    <option value="Charms" data-price="15">Charms ($15)</option>
+                    <option value="3D Art" data-price="20">3D Art ($20)</option>
+                </select>
+                <button type="submit">Add to Cart</button>
+            </form>
+            <div class="cart-section">
+                <h3>Your Cart</h3>
+                <ul id="cart-list"></ul>
+                <p>Total: <span id="cart-total">$0.00</span></p>
+                <button onclick="clearCart()">Clear Cart</button>
+            </div>
         </section>
     </main>
     <footer>
