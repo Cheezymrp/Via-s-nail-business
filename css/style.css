@@ -1,3 +1,103 @@
+/* Star Rating Styles */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    gap: 2px;
+}
+.star-rating input[type="radio"] {
+    display: none;
+}
+.star-rating label {
+    font-size: 2rem;
+    color: #e0b0d5;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0 2px;
+}
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #e67ca7;
+}
+.review-item .stars {
+    color: #e67ca7;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    display: block;
+}
+/* Review Section Styles */
+.review-section {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(161,78,124,0.10);
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    padding: 32px 24px;
+}
+.review-section h2 {
+    color: #a14e7c;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.review-input, .review-textarea {
+    padding: 10px 14px;
+    border: 1px solid #e67ca7;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #f6e7fa;
+    color: #6c3a5c;
+    transition: border 0.2s;
+}
+.review-input:focus, .review-textarea:focus {
+    border: 1.5px solid #a14e7c;
+    outline: none;
+}
+.review-btn {
+    background: linear-gradient(90deg, #e67ca7 0%, #a14e7c 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.review-btn:hover {
+    background: linear-gradient(90deg, #a14e7c 0%, #e67ca7 100%);
+    transform: scale(1.04);
+}
+.reviews-list {
+    margin-top: 10px;
+}
+.reviews-list h3 {
+    color: #a14e7c;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.review-item {
+    background: #f8b6d2;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 4px rgba(161,78,124,0.07);
+    color: #6c3a5c;
+}
+.review-item strong {
+    color: #a14e7c;
+    font-size: 1.05rem;
+}
 /* Reset some default styles */
 * {
     margin: 0;
