@@ -33,7 +33,7 @@ function updateCartDisplay() {
     const cartTotal = document.getElementById('cart-total');
     if (!cartList || !cartTotal) return;
     cartList.innerHTML = '';
-    let total = 10; // $10 booking charge
+    let total = 0; // booking charge removed
     cart.forEach(item => {
         const li = document.createElement('li');
         li.textContent = `${item.category}: ${item.name} ($${item.price})`;
