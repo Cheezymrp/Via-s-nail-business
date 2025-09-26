@@ -554,3 +554,82 @@ h1, h2, h3 {
     font-size: 1rem;
     margin-bottom: 8px;
 }
+
+/* Booking section and per-nail controls */
+.booking-section {
+    margin: 24px auto 0 auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(161,78,124,0.06);
+    padding: 20px;
+}
+
+/* When booking-section lives inside the .services flex container, make it occupy a full row and center */
+.services .booking-section {
+    /* Let the booking card keep its max-width and center itself inside .services */
+    flex: 0 0 auto;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.booking-section .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 18px;
+    align-items: start;
+}
+.booking-section label {
+    display: block;
+    margin-bottom: 6px;
+    color: #6c3a5c;
+}
+.pernail-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 8px 0 16px 0;
+}
+.pernail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8f6fa;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #f0e8ef;
+}
+.pn-label {
+    flex: 1 1 auto;
+    color: #6c3a5c;
+    font-size: 0.95rem;
+}
+.pn-minus, .pn-plus {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #e0d2df;
+    background: #fff;
+    color: #a14e7c;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pn-minus:hover, .pn-plus:hover {
+    background: #f6e7fa;
+}
+.pn-count {
+    min-width: 28px;
+    text-align: center;
+    font-weight: 600;
+    color: #a14e7c;
+}
+
+/* Make the booking layout stack on small screens */
+@media (max-width: 880px) {
+    .booking-section .contact-form {
+        grid-template-columns: 1fr;
+    }
+}

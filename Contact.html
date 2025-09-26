@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="assets/images/Via's logo.jpg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <script src="js/cart.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,51 +41,7 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
                 <button type="submit">Send Email</button>
             </form>
-            <form id="booking-form" class="contact-form" onsubmit="event.preventDefault(); addAllToCart();">
-                <label for="base">Base Price:</label>
-                <select id="base" name="base">
-                    <option value="Dry Manicure" data-price="15">Dry Manicure ($15)</option>
-                    <option value="Gel Manicure" data-price="25">Gel Manicure ($25)</option>
-                    <option value="Builder Gel" data-price="30">Builder Gel ($30)</option>
-                    <option value="Press Ons" data-price="30">Press Ons ($30)</option>
-                    <option value="Gel X (Any Length)" data-price="35">Gel X (Any Length) ($35)</option>
-                </select>
-                <label for="fullset">Full Set Designs:</label>
-                <select id="fullset" name="fullset">
-                    <option value="Chrome" data-price="5">Chrome ($5)</option>
-                    <option value="French Tip" data-price="10">French Tip ($10)</option>
-                    <option value="Isolated Chrome" data-price="13">Isolated Chrome ($13)</option>
-                    <option value="Ombre Aura" data-price="13">Ombré Aura ($13)</option>
-                    <option value="Bling" data-price="15">Bling ($15)</option>
-                </select>
-                <label>Per Nail Designs:</label>
-                <div id="pernail-checkboxes" class="pernail-checkboxes">
-                    <label><input type="checkbox" value="Charms/Rhinestones" data-price="1"> Charms/Rhinestones ($1)</label><br>
-                    <label><input type="checkbox" value="Chrome" data-price="1"> Chrome ($1)</label><br>
-                    <label><input type="checkbox" value="Easy Nail Art" data-price="2"> Easy Nail Art ($2)</label><br>
-                    <label><input type="checkbox" value="French Tip" data-price="2"> French Tip ($2)</label><br>
-                    <label><input type="checkbox" value="Blooming Gel" data-price="2"> Blooming Gel ($2)</label><br>
-                    <label><input type="checkbox" value="Ombre/Aura" data-price="3"> Ombré/Aura ($3)</label><br>
-                    <label><input type="checkbox" value="Difficult Nail Art" data-price="3"> Difficult Nail Art ($3)</label><br>
-                    <label><input type="checkbox" value="3D Nail Art (Small)" data-price="3"> 3D Nail Art (Small) ($3)</label><br>
-                    <label><input type="checkbox" value="Isolated Chrome" data-price="3"> Isolated Chrome ($3)</label><br>
-                    <label><input type="checkbox" value="Bling (Full Nail)" data-price="3"> Bling (Full Nail) ($3)</label><br>
-                    <label><input type="checkbox" value="3D Nail Art (Med/Large)" data-price="5"> 3D Nail Art (Med/Large) ($5)</label>
-                </div>
-                <label for="addons">Add-Ons:</label>
-                <select id="addons" name="addons">
-                    <option value="Soak Off" data-price="15">Soak Off ($15)</option>
-                    <option value="Fills" data-price="5">Fills ($5)</option>
-                    <option value="Mini Cuticle Oil (Refillable)" data-price="3">Mini Cuticle Oil (Refillable) ($3)</option>
-                </select>
-                <button type="button" onclick="addAllToCart()">Add All Selected to Cart</button>
-            </form>
-                <div class="cart-section">
-                <h3>Your Cart</h3>
-                <ul id="cart-list"></ul>
-                <p>Total: <span id="cart-total">$0.00</span></p>
-                <button onclick="clearCart()">Clear Cart</button>
-            </div>
+            <!-- Booking form moved to Services.html -->
         </section>
     </main>
     <footer>

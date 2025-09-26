@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/Via's logo.jpg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +49,112 @@
                 <p>Choose from full set designs or singular nail designs.</p>
                 <p><strong>Book now</strong></p>
             </div>
+            <!-- Booking form and cart moved from Contact.html -->
+            <section class="booking-section">
+                <form id="booking-form" class="contact-form" onsubmit="event.preventDefault(); addAllToCart();">
+                    <label for="base">Base Price:</label>
+                    <select id="base" name="base">
+                        <option value="Dry Manicure" data-price="15">Dry Manicure ($15)</option>
+                        <option value="Gel Manicure" data-price="25">Gel Manicure ($25)</option>
+                        <option value="Builder Gel" data-price="30">Builder Gel ($30)</option>
+                        <option value="Press Ons" data-price="30">Press Ons ($30)</option>
+                        <option value="Gel X (Any Length)" data-price="35">Gel X (Any Length) ($35)</option>
+                    </select>
+                    <label for="fullset">Full Set Designs:</label>
+                    <select id="fullset" name="fullset">
+                        <option value="Chrome" data-price="5">Chrome ($5)</option>
+                        <option value="French Tip" data-price="10">French Tip ($10)</option>
+                        <option value="Isolated Chrome" data-price="10">Isolated Chrome ($10)</option>
+                        <option value="Ombre Aura" data-price="13">Ombré Aura ($13)</option>
+                        <option value="Bling" data-price="15">Bling ($15)</option>
+                        <option value="None" data-price="0">None</option>
+                    </select>
+                    <label>Per Nail Designs (use + / - to choose quantity per design):</label>
+                    <div id="pernail-controls" class="pernail-controls">
+                        <!-- ...existing pernail controls copied from Contact.html... -->
+                        <div class="pernail" data-name="Charms/Rhinestones" data-price="1">
+                            <span class="pn-label">Charms/Rhinestones ($1)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="Chrome" data-price="1">
+                            <span class="pn-label">Chrome ($1)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="Easy Nail Art" data-price="2">
+                            <span class="pn-label">Easy Nail Art ($2)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="French Tip" data-price="2">
+                            <span class="pn-label">French Tip ($2)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="Blooming Gel" data-price="2">
+                            <span class="pn-label">Blooming Gel ($2)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="Ombre/Aura" data-price="3">
+                            <span class="pn-label">Ombré/Aura ($3)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="Difficult Nail Art" data-price="3">
+                            <span class="pn-label">Difficult Nail Art ($3)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="3D Nail Art (Small)" data-price="3">
+                            <span class="pn-label">3D Nail Art (Small) ($3)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="Isolated Chrome" data-price="3">
+                            <span class="pn-label">Isolated Chrome ($3)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="Bling (Full Nail)" data-price="3">
+                            <span class="pn-label">Bling (Full Nail) ($3)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                        <div class="pernail" data-name="3D Nail Art (Med/Large)" data-price="5">
+                            <span class="pn-label">3D Nail Art (Med/Large) ($5)</span>
+                            <button type="button" class="pn-minus">−</button>
+                            <span class="pn-count">0</span>
+                            <button type="button" class="pn-plus">+</button>
+                        </div>
+                    </div>
+                    <label for="addons">Add-Ons:</label>
+                    <select id="addons" name="addons">
+                        <option value="Soak Off" data-price="15">Soak Off ($15)</option>
+                        <option value="Fills" data-price="5">Fills ($5)</option>
+                        <option value="Mini Cuticle Oil (Refillable)" data-price="3">Mini Cuticle Oil (Refillable) ($3)</option>
+                        <option value="None" data-price="0">None</option>
+                    </select>
+                    <button type="button" onclick="addAllToCart()">Add All Selected to Cart</button>
+                </form>
+                <div class="cart-section">
+                    <h3>Your Cart</h3>
+                    <ul id="cart-list"></ul>
+                    <p>Total: <span id="cart-total">$0.00</span></p>
+                    <button onclick="clearCart()">Clear Cart</button>
+                </div>
+            </section>
         </section>
     </main>
 
