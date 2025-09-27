@@ -52,7 +52,8 @@
             <!-- Booking form and cart moved from Contact.html -->
             <section class="booking-section">
                 <form id="booking-form" class="contact-form" onsubmit="event.preventDefault(); addAllToCart();">
-                    <label for="base">Base Price:</label>
+                    <label for="base">Service:</label>
+                    <br>
                     <select id="base" name="base">
                         <option value="Dry Manicure" data-price="15">Dry Manicure ($15)</option>
                         <option value="Gel Manicure" data-price="25">Gel Manicure ($25)</option>
@@ -60,7 +61,9 @@
                         <option value="Press Ons" data-price="30">Press Ons ($30)</option>
                         <option value="Gel X (Any Length)" data-price="35">Gel X (Any Length) ($35)</option>
                     </select>
+                    <br>
                     <label for="fullset">Full Set Designs:</label>
+                    <br>
                     <select id="fullset" name="fullset">
                         <option value="Chrome" data-price="5">Chrome ($5)</option>
                         <option value="French Tip" data-price="10">French Tip ($10)</option>
@@ -69,7 +72,9 @@
                         <option value="Bling" data-price="15">Bling ($15)</option>
                         <option value="None" data-price="0">None</option>
                     </select>
+                    <br>
                     <label>Per Nail Designs (use + / - to choose quantity per design):</label>
+                    <br>
                     <div id="pernail-controls" class="pernail-controls">
                         <!-- ...existing pernail controls copied from Contact.html... -->
                         <div class="pernail" data-name="Charms/Rhinestones" data-price="1">
@@ -139,13 +144,16 @@
                             <button type="button" class="pn-plus">+</button>
                         </div>
                     </div>
+                    <br>
                     <label for="addons">Add-Ons:</label>
+                    <br>
                     <select id="addons" name="addons">
                         <option value="Soak Off" data-price="15">Soak Off ($15)</option>
                         <option value="Fills" data-price="5">Fills ($5)</option>
                         <option value="Mini Cuticle Oil (Refillable)" data-price="3">Mini Cuticle Oil (Refillable) ($3)</option>
                         <option value="None" data-price="0">None</option>
                     </select>
+                    <br>
                     <button type="button" onclick="addAllToCart()">Add All Selected to Cart</button>
                 </form>
                 <div class="cart-section">
