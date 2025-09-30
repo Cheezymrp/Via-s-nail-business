@@ -40,6 +40,11 @@
                 <p><strong>Book now</strong> • $30 • 2 hrs</p>
             </div>
             <div class="service-card">
+                <h2>Acrylic Overlay</h2>
+                <p>Base price is $30</p>
+                <p><strong>Book now</strong> • $30 • 2 hrs</p>
+            </div>
+            <div class="service-card">
                 <h2>Add-Ons</h2>
                 <p>Choose from a variety of nail art, charms, and enhancements to customize your set.</p>
                 <p><strong>Book now</strong></p>
@@ -55,22 +60,23 @@
                     <label for="base">Service:</label>
                     <br>
                     <select id="base" name="base">
-                        <option value="Dry Manicure" data-price="15">Dry Manicure ($15)</option>
-                        <option value="Gel Manicure" data-price="25">Gel Manicure ($25)</option>
-                        <option value="Builder Gel" data-price="30">Builder Gel ($30)</option>
-                        <option value="Press Ons" data-price="30">Press Ons ($30)</option>
                         <option value="Gel X (Any Length)" data-price="35">Gel X (Any Length) ($35)</option>
+                        <option value="Builder Gel" data-price="30">Builder Gel ($30)</option>
+                        <option value="Acrylic Overlay" data-price="30">Acrylic Overlay ($30)</option>
+                        <option value="Gel Manicure" data-price="25">Gel Manicure ($25)</option>
+                        <option value="Dry Manicure" data-price="15">Dry Manicure ($15)</option>
+                        <option value="Press Ons" data-price="30">Press Ons ($30)</option>
                     </select>
                     <br>
                     <label for="fullset">Full Set Designs:</label>
                     <br>
                     <select id="fullset" name="fullset">
+                        <option value="None" data-price="0">None</option>
                         <option value="Chrome" data-price="5">Chrome ($5)</option>
                         <option value="French Tip" data-price="10">French Tip ($10)</option>
                         <option value="Isolated Chrome" data-price="10">Isolated Chrome ($10)</option>
                         <option value="Ombre Aura" data-price="13">Ombré Aura ($13)</option>
                         <option value="Bling" data-price="15">Bling ($15)</option>
-                        <option value="None" data-price="0">None</option>
                     </select>
                     <br>
                     <label>Per Nail Designs (use + / - to choose quantity per design):</label>
@@ -148,10 +154,10 @@
                     <label for="addons">Add-Ons:</label>
                     <br>
                     <select id="addons" name="addons">
-                        <option value="Soak Off" data-price="15">Soak Off ($15)</option>
-                        <option value="Fills" data-price="5">Fills ($5)</option>
-                        <option value="Mini Cuticle Oil (Refillable)" data-price="3">Mini Cuticle Oil (Refillable) ($3)</option>
                         <option value="None" data-price="0">None</option>
+                        <option value="Mini Cuticle Oil (Refillable)" data-price="3">Mini Cuticle Oil (Refillable) ($3)</option>
+                        <option value="Fills" data-price="5">Fills ($5)</option>
+                        <option value="Soak Off" data-price="15">Soak Off ($15)</option>
                     </select>
                     <br>
                     <button type="button" onclick="addAllToCart()">Add All Selected to Cart</button>

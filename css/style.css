@@ -31,10 +31,11 @@
 .review-section {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(61,43,31,0.10);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
     max-width: 600px;
     margin: 40px auto 0 auto;
     padding: 32px 24px;
+    color: #fff;
 }
 .review-section h2 {
     color: #3D2B1F; /* primary */
@@ -56,8 +57,11 @@
     font-size: 1rem;
     font-family: inherit;
     background: #C4A484;
-    color: #7F6244;
+    color: #fff; /* make input text white for contrast */
     transition: border 0.2s;
+}
+.review-input::placeholder, .review-textarea::placeholder {
+    color: #fff; /* lighter placeholder for readability */
 }
 .review-input:focus, .review-textarea:focus {
     border: 1.5px solid #3D2B1F;
@@ -82,7 +86,7 @@
     margin-top: 10px;
 }
 .reviews-list h3 {
-    color: #3D2B1F;
+    color: #fff;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -91,8 +95,8 @@
     border-radius: 8px;
     padding: 14px 16px;
     margin-bottom: 14px;
-    box-shadow: 0 1px 4px rgba(61,43,31,0.07);
-    color: #7F6244;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    color: #fff;
 }
 .review-item strong {
     color: #3D2B1F;
@@ -246,15 +250,16 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
     padding: 32px 16px;
-    background: #C4A484;
+    background: transparent; /* keep container neutral so cards pop */
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(161,78,124,0.08);
 }
 
 .gallery figure {
-    background: #fff;
+    background: #fff; /* card background */
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(161,78,124,0.12);
+    border: 1px solid rgba(61,43,31,0.06);
+    box-shadow: 0 6px 20px rgba(61,43,31,0.12);
     overflow: hidden;
     margin: 0;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -264,24 +269,24 @@ header {
 }
 
 .gallery figure:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(161,78,124,0.18);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(61,43,31,0.18);
 }
 
 .gallery img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-bottom: 1px solid #C4A484;
+    border-bottom: 1px solid rgba(61,43,31,0.06);
     border-radius: 12px 12px 0 0;
-    transition: opacity 1s;
+    transition: opacity 0.25s ease-in-out;
 }
 
 .gallery figcaption {
     padding: 12px 8px;
     font-size: 1rem;
     color: #3D2B1F;
-    background: #C4A484;
+    background: #fff;
     width: 100%;
     text-align: center;
 }
@@ -481,7 +486,7 @@ h1, h2, h3 {
 .faq-answer {
     display: none;
     padding: 0 0 12px 0;
-    color: #555;
+    color: #fff;
     font-size: 1rem;
     background: #C4A484;
     border-radius: 0 0 8px 8px;
@@ -603,7 +608,7 @@ h1, h2, h3 {
 }
 .pn-label {
     flex: 1 1 auto;
-    color: #7F6244;
+    color: #fff;
     font-size: 0.95rem;
 }
 .pn-minus, .pn-plus {
@@ -626,7 +631,7 @@ h1, h2, h3 {
     min-width: 28px;
     text-align: center;
     font-weight: 600;
-    color: #3D2B1F;
+    color: #fff;
 }
 
 /* Make the booking layout stack on small screens */
